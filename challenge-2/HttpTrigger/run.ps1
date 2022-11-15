@@ -17,7 +17,7 @@ param($Request, $TriggerMetadata)
 $url = "https://htfapi.azurewebsites.net/api/the-good-hearted-fella"
 $method = "POST"
 $body = @{
-    "showYourInnerSelf": false
+    "showYourInnerSelf": true
 }
 $jsonBody = $body | ConvertFrom-Json
 
