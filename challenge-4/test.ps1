@@ -5,25 +5,22 @@ using namespace System.Net
 # Input bindings are passed in via param block.
 param($Request, $TriggerMetadata)
 
+for (($i = 10); $i -ge 0; $i-)
+{
+    "`$i:$i"
+}
 ###############################
 # endregion
-
-
-
-
 
 ## Start making changes from this point
 
 $url = "https://htfapi.azurewebsites.net/api/the-good-hearted-fella"
 $method = "POST"
 $body = @{
-    "showYourInnerSelf": false
+      "teamId": "12874",
+      "countdownNumber": x
 }
 $jsonBody = $body | ConvertFrom-Json
-
-
-
-
 
 ### DO NOT CHANGE THIS PART ###
 # region DO_NOT_CHANGE_2
